@@ -2,11 +2,15 @@
   <v-card-title>
     <svg-icon icon="simput" :class="$style.glanceIcon" />
     <v-spacer />
-    <v-btn flat icon v-on:click="$emit('close')">
-      <v-icon v-text="`$close`" />
+    <v-btn
+      flat
+      icon
+      v-on:click="$emit('close')"
+    >
+      <v-icon>{{ $vuetify.icons.simput.close }}</v-icon>
     </v-btn>
   </v-card-title>
-  <hr />
+  <hr>
   <v-card-text>
     <p class="body-1">
       <a href="https://kitware.github.io/simput/">Simput</a>

@@ -23,7 +23,7 @@ import ReaderFactory from 'simput/src/io/ReaderFactory';
 
 Vue.use(Vuetify, {
   icons: {
-    values: {
+    simput: {
       add: 'mdi-plus',
       warning: 'mdi-alert-outline',
       contentCopy: 'mdi-content-copy',

@@ -39,7 +39,7 @@
                 :class="$style.listButton"
                 v-on:click.stop="dataModel.addView(node.id)"
               >
-                <v-icon small v-text="`$add`" />
+                <v-icon small>{{ $vuetify.icons.simput.add }}</v-icon>
               </v-btn>
             </v-list-tile-title>
           </v-list-tile-content>
@@ -67,8 +67,9 @@
                   key="if-child-invalid"
                   small
                   :title="child.invalid"
-                  v-text="`$warning`"
-                />
+                >
+                  {{ $vuetify.icons.simput.warning }}
+                </v-icon>
                 <v-btn
                   v-if="child.clonable"
                   key="if-child-clonable"
@@ -78,7 +79,7 @@
                   :class="$style.listButton"
                   v-on:click.stop="dataModel.cloneView(child.id, child.index)"
                 >
-                  <v-icon small v-text="`contentCopy`" />
+                  <v-icon small>{{ $vuetify.icons.simput.contentCopy }}</v-icon>
                 </v-btn>
                 <v-btn
                   v-if="!child.noDelete"
@@ -88,7 +89,7 @@
                   :class="$style.listButton"
                   v-on:click.stop="dataModel.deleteView(child.id, child.index)"
                 >
-                  <v-icon small v-text="`delete`" />
+                  <v-icon small>{{ $vuetify.icons.simput.delete }}</v-icon>
                 </v-btn>
               </v-list-tile-title>
             </v-list-tile-content>
