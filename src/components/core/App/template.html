@@ -49,16 +49,12 @@
         color="error"
         v-on:click="errorDialog = true"
       >
-        <v-icon>{{ $vuetify.icons.simput.error }}</v-icon>
+        <v-icon v-text="`$error`" />
         <span>{{ errors.length }}</span>
         <span v-show="!smallScreen">error(s)</span>
       </v-btn>
-      <v-btn
-        :class="$style.toolbarButton"
-        flat
-        v-on:click="promptUserFiles"
-      >
-        <v-icon>{{ $vuetify.icons.simput.folder }}</v-icon>
+      <v-btn :class="$style.toolbarButton" flat v-on:click="promptUserFiles">
+        <v-icon v-text="`$folder`" />
         <span v-show="!smallScreen">Open</span>
       </v-btn>
       <v-btn
@@ -67,7 +63,7 @@
         flat
         v-on:click="save"
       >
-        <v-icon>{{ $vuetify.icons.simput.download }}</v-icon>
+        <v-icon v-text="`$download`" />
         <span v-show="!smallScreen">Save</span>
       </v-btn>
       <v-btn
@@ -109,9 +105,8 @@
         <v-icon
           class="display-4"
           :class="$style.noTransition"
-        >
-          {{ $vuetify.icons.simput.publish }}
-        </v-icon>
+          v-text="`$publish`"
+        />
       </div>
     </div>
 

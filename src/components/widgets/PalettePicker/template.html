@@ -13,9 +13,8 @@
         v-if="color === value"
         :class="$style.check"
         :size="size"
-      >
-        {{ $vuetify.icons.simput.check }}
-      </v-icon>
+        v-text="`$check`"
+      />
     </div>
   </div>
 </div>
